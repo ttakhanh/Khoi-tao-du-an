@@ -48,11 +48,29 @@ header {
 
 
 <script>
-export default {}
+import AppHeader from "@/components/AppHeader.vue"
+import ContactList from "@/components/ContactList.vue"
+import InputSearch from "@/components/InputSearch.vue"
+import ContactCard from "@/components/ContactCard.vue"
+
+export default {
+  components: {
+    AppHeader,
+    ContactCard,
+    ContactList,
+    InputSearch,
+  },
+};
+
 </script>
-                npm run dev
+
 <template>
-  <h1>Hello. Vue.js!</h1>
+  <div id="app">
+    <AppHeader />
+    <div class="container mt-3">
+      <router-view />
+    </div>
+  </div>
 </template>
 
 <style>
